@@ -1,10 +1,68 @@
-$background-image: 'images/background.jpg';
+$background-image: '/images/background.jpeg';
 $font-default: 16px; 
+$font-size-hero: 4.5rem;
+$font-size-body: 2rem;
+$font-line-body: 1.3; 
 $font-logo: 'Georgia', serif; 
-$font-body: 'Lucidia Grande', 'Courier', sans-serif; 
-$color-primary: #E5DB44;
-$color-secondary: #464B49; 
+$font-body: 'Lucidia Grande', sans-serif; 
+$color-primary: hsl(56, 76%, 58%);
+$color-primary-transparent: hsla(13, 82%, 52%, .9);
+$color-secondary: hsl(156, 3%, 28%); 
 
 html {
-	background: url(images/bg.jpg) no-repeat center center fixed; 
+	background: url($background-image) no-repeat center center fixed;
+	background-size: cover; 
+	font-family: $font-logo; 
+}
+
+body {
+	width: 85%;
+	margin: 0 auto;
+}
+header {
+	#logo {
+		font-family: $font-body; 
+	}
+	margin-top: 2%;
+	float: left;
+	width: 20%;
+	nav {
+		margin: 2%;
+		li {
+			display: block;
+			list-style: none; 
+		}
+
+		a {
+			color: $color-secondary;
+			text-decoration: none;
+		}
+
+		a:hover {
+			color: $color-primary-transparent;
+		}
+	}
+}
+
+section {
+	width: 40%;
+	float: right;
+	color: $color-primary-transparent;
+	font-weight: 800;
+	margin: 0 auto;
+	font-size: $font-size-hero; 
+	font-family: $font-logo; 
+	#about, #services {
+		font-size: $font-size-body;
+		line-height: $font-line-body;
+	}
+
+}
+
+footer {
+	clear: both;
+	display: block;
+	position: fixed;
+	top: 90%;
+	left: 5%;
 }
