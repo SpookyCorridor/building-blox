@@ -35,5 +35,5 @@ build/
 .rvmrc
 
 # images
-.jpeg
+*.jpeg
 
